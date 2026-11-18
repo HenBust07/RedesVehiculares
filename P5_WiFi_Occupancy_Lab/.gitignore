@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+**/build*/
+**/sdkconfig.old
+**/managed_components/
+data/raw/
+data/synthetic/
+results/
+*.pcap
+*.pcapng
+*.bin
+*.elf
+*.zip

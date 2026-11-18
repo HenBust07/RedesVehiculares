@@ -1,0 +1,46 @@
+menu "P5 passive probe sensor"
+config P5_SENSOR_ID
+    string "Sensor ID (letters, digits, underscore, hyphen only)"
+    default "BUS_001"
+config P5_CHANNEL
+    int "Fixed WiFi channel (no channel hopping)"
+    range 1 11
+    default 6
+config P5_WINDOW_MS
+    int "Observation window in milliseconds"
+    range 1000 60000
+    default 10000
+config P5_SESSION_WINDOWS
+    int "Windows per START command (automatic radio stop afterwards)"
+    range 1 60
+    default 12
+config P5_UART_BAUD
+    int "UART baud (must match console baud in sdkconfig)"
+    default 115200
+config P5_QUEUE_CAPACITY
+    int "Maximum queued minimal events"
+    range 4 256
+    default 64
+config P5_UNIQUE_CAPACITY
+    int "Bounded unique token table slots"
+    range 16 2048
+    default 512
+config P5_MAX_FRAME_BYTES
+    int "Maximum accepted Probe Request length including FCS"
+    range 64 4095
+    default 1024
+config P5_WORKER_STACK_BYTES
+    int "Static worker stack size in bytes (multiple of 4)"
+    range 4096 16384
+    default 6144
+config P5_RSSI_FILTER
+    bool "Enable experimental RSSI filtering"
+    default n
+config P5_RSSI_MIN_DBM
+    int "Experimental minimum RSSI, NOT a calibrated occupancy threshold"
+    range -127 0
+    default -127
+    help
+        Ignored unless P5_RSSI_FILTER is enabled. No definitive threshold has
+        been selected. Calibrate experimentally before interpreting occupancy.
+endmenu

@@ -1,0 +1,4 @@
+# Versiones de bibliotecas del entorno original; Tkinter pertenece a Python.
+pyserial==3.5
+matplotlib==3.10.8
+numpy==2.4.4

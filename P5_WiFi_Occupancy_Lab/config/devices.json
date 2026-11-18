@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "port_policy": "COM de ejemplo del entorno original; verificar asignacion fisica antes de conectar.",
+  "devices": [
+    {
+      "sensor_id": "SENSOR_01",
+      "bus_id": "BUS_001",
+      "port": "COM9",
+      "usb_bridge": "CH340",
+      "usb_vid_pid": "1A86:7523",
+      "chip": "ESP32-D0WD",
+      "revision": "1.0",
+      "target": "esp32",
+      "cores": 2,
+      "flash_bytes": 4194304,
+      "wifi": "2.4 GHz IEEE 802.11 b/g/n",
+      "bluetooth": "4.2 BR/EDR y BLE (capacidad del chip; no probada en esta fase)",
+      "firmware": {
+        "project": "p5_sniffer_v1",
+        "protocol_sensor_id": "BUS_001"
+      }
+    },
+    {
+      "sensor_id": "SENSOR_02",
+      "bus_id": "BUS_001",
+      "port": "COM11",
+      "usb_bridge": "Silicon Labs CP210x",
+      "usb_vid_pid": "10C4:EA60",
+      "chip": "ESP32-D0WD-V3",
+      "revision": "3.1",
+      "target": "esp32",
+      "cores": 2,
+      "flash_bytes": 4194304,
+      "wifi": "2.4 GHz IEEE 802.11 b/g/n; recepcion de Probe Requests validada solo en canal 6",
+      "bluetooth": "4.2 BR/EDR y BLE (capacidad del chip; no probada en esta fase)",
+      "firmware": {
+        "project": "p5_sniffer_v1",
+        "protocol_sensor_id": "BUS_002"
+      }
+    }
+  ]
+}
